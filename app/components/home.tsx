@@ -141,6 +141,7 @@ function Screen() {
         ` ${shouldTightBorder ? styles["tight-container"] : styles.container} ${
           // ## disable lang ar
           // getLang() === "ar" ? styles["rtl-screen"] : ""
+          ""
         }`
       }
     >
