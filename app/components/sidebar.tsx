@@ -250,12 +250,13 @@ export function SideBar(props: { className?: string }) {
       {...props}
     >
       <SideBarHeader
-        title="NextChat"
-        subTitle="Build your own AI assistant."
+        title="IA ACE"
+        subTitle="仅ACE内部测试使用"
         logo={<ChatGptIcon />}
         shouldNarrow={shouldNarrow}
       >
-        <div className={styles["sidebar-header-bar"]}>
+        {/* disable Mask and plugins */}
+        {/* <div className={styles["sidebar-header-bar"]}>
           <IconButton
             icon={<MaskIcon />}
             text={shouldNarrow ? undefined : Locale.Mask.Name}
@@ -287,7 +288,7 @@ export function SideBar(props: { className?: string }) {
             onClick={() => setshowDiscoverySelector(true)}
             shadow
           />
-        </div>
+        </div> */}
         {showDiscoverySelector && (
           <Selector
             items={[
@@ -328,22 +329,22 @@ export function SideBar(props: { className?: string }) {
               />
             </div>
             <div className={styles["sidebar-action"]}>
-              <Link to={Path.Settings}>
+              {/* <Link to={Path.Settings}>
                 <IconButton
                   aria={Locale.Settings.Title}
                   icon={<SettingsIcon />}
                   shadow
                 />
-              </Link>
+              </Link> */}
             </div>
             <div className={styles["sidebar-action"]}>
-              <a href={REPO_URL} target="_blank" rel="noopener noreferrer">
+              {/* <a href={REPO_URL} target="_blank" rel="noopener noreferrer">
                 <IconButton
                   aria={Locale.Export.MessageFromChatGPT}
                   icon={<GithubIcon />}
                   shadow
                 />
-              </a>
+              </a> */}
             </div>
           </>
         }

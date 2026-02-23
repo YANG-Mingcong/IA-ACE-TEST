@@ -1525,7 +1525,7 @@ export function Settings() {
       </div>
       <div className={styles["settings"]}>
         <List>
-          <ListItem title={Locale.Settings.Avatar}>
+          {/* <ListItem title={Locale.Settings.Avatar}>
             <Popover
               onClose={() => setShowEmojiPicker(false)}
               content={
@@ -1549,7 +1549,7 @@ export function Settings() {
                 <Avatar avatar={config.avatar} />
               </div>
             </Popover>
-          </ListItem>
+          </ListItem> */}
 
           <ListItem
             title={Locale.Settings.Update.Version(currentVersion ?? "unknown")}
@@ -1561,7 +1561,7 @@ export function Settings() {
                 : Locale.Settings.Update.IsLatest
             }
           >
-            {checkingUpdate ? (
+            {/* {checkingUpdate ? (
               <LoadingIcon />
             ) : hasNewVersion ? (
               clientConfig?.isApp ? (
@@ -1581,7 +1581,7 @@ export function Settings() {
                 text={Locale.Settings.Update.CheckUpdate}
                 onClick={() => checkUpdate(true)}
               />
-            )}
+            )} */}
           </ListItem>
 
           <ListItem title={Locale.Settings.SendKey}>
@@ -1657,7 +1657,7 @@ export function Settings() {
             ></InputRange>
           </ListItem>
 
-          <ListItem
+          {/* <ListItem
             title={Locale.Settings.FontFamily.Title}
             subTitle={Locale.Settings.FontFamily.SubTitle}
           >
@@ -1672,7 +1672,7 @@ export function Settings() {
                 )
               }
             ></input>
-          </ListItem>
+          </ListItem> */}
 
           <ListItem
             title={Locale.Settings.AutoGenerateTitle.Title}
@@ -1816,7 +1816,7 @@ export function Settings() {
         </List>
 
         <List id={SlotID.CustomModel}>
-          {saasStartComponent}
+          {/* {saasStartComponent} */}
           {accessCodeComponent}
 
           {!accessStore.hideUserApiKey && (
@@ -1849,7 +1849,7 @@ export function Settings() {
                   </ListItem>
 
                   {openAIConfigComponent}
-                  {azureConfigComponent}
+                  {/* {azureConfigComponent} */}
                   {googleConfigComponent}
                   {anthropicConfigComponent}
                   {baiduConfigComponent}
@@ -1929,7 +1929,7 @@ export function Settings() {
         {shouldShowPromptModal && (
           <UserPromptModal onClose={() => setShowPromptModal(false)} />
         )}
-        <List>
+        {/* <List>
           <RealtimeConfigList
             realtimeConfig={config.realtimeConfig}
             updateConfig={(updater) => {
@@ -1950,7 +1950,7 @@ export function Settings() {
               config.update((config) => (config.ttsConfig = ttsConfig));
             }}
           />
-        </List>
+        </List> */}
 
         <DangerItems />
       </div>
