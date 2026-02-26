@@ -9,9 +9,10 @@ const cn = {
   Error: {
     Unauthorized: isApp
       ? `😆 对话遇到了一些问题，不用慌:
-       \\ 1️⃣ 如果你想消耗自己的 OpenAI 资源，点击[这里](/#/settings)修改设置 ⚙️`
+       \\ 1️⃣ 点击[这里](/#/auth)输入管理员为你提供的访问秘钥 🔑
+       `
       : `😆 对话遇到了一些问题，不用慌:
-       \ 1️⃣ 如果你正在使用私有部署版本，点击[这里](/#/auth)输入访问秘钥 🔑
+       \ 1️⃣ 点击[这里](/#/auth)输入管理员为你提供的访问秘钥 🔑
        `,
   },
   Auth: {
@@ -534,6 +535,17 @@ const cn = {
       CustomModel: {
         Title: "自定义模型名",
         SubTitle: "增加自定义模型可选项，使用英文逗号隔开",
+      },
+      AI302: {
+        ApiKey: {
+          Title: "接口密钥",
+          SubTitle: "使用自定义302.AI API Key",
+          Placeholder: "302.AI API Key",
+        },
+        Endpoint: {
+          Title: "接口地址",
+          SubTitle: "样例：",
+        },
       },
     },
 
