@@ -1940,8 +1940,8 @@ export function Settings() {
               );
             }}
           />
-        </List>
-        <List>
+        </List> */}
+        {/* <List>
           <TTSConfigList
             ttsConfig={config.ttsConfig}
             updateConfig={(updater) => {
