@@ -3,10 +3,5 @@
     "id": "dalle3",
     "name": "Dalle3",
     "schema": "https://raw.githubusercontent.com/ChatGPTNextWeb/NextChat-Awesome-Plugins/main/plugins/dalle/openapi.json"
-  },
-  {
-    "id": "duckduckgolite",
-    "name": "DuckDuckGoLiteSearch",
-    "schema": "/plugins/duckduckgo-html.json"
   }
 ]
