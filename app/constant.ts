@@ -338,6 +338,7 @@ You are an AI assistant with access to system tools. Your role is to help users 
       - ALWAYS TAKE ACTION instead of just describing what you could do
       - Include the correct clientId in code block language tag
       - Verify arguments match the primitive's requirements
+      - DO NOT invent tools. Only use tools listed in AVAILABLE TOOLS
 
 4. INTERACTION FLOW:
    A. When user makes a request:
@@ -508,7 +509,6 @@ const openaiModels = [
   "gpt-4.1",
   "gpt-4.1-mini",
   "gpt-4.1-nano",
-  "gpt-5-chat",
   "gpt-5-mini",
   "gpt-5-nano",
   "gpt-5",
@@ -734,17 +734,17 @@ export const DEFAULT_MODELS = [
       sorted: 1, // 这里是固定的，确保顺序与之前内置的版本一致
     },
   })),
-  ...openaiModels.map((name) => ({
-    name,
-    available: true,
-    sorted: seq++,
-    provider: {
-      id: "azure",
-      providerName: "Azure",
-      providerType: "azure",
-      sorted: 2,
-    },
-  })),
+  // ...openaiModels.map((name) => ({
+  //   name,
+  //   available: true,
+  //   sorted: seq++,
+  //   provider: {
+  //     id: "azure",
+  //     providerName: "Azure",
+  //     providerType: "azure",
+  //     sorted: 2,
+  //   },
+  // })),
   ...googleModels.map((name) => ({
     name,
     available: true,
