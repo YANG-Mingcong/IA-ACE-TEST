@@ -7,6 +7,6 @@
   {
     "id": "duckduckgolite",
     "name": "DuckDuckGoLiteSearch",
-    "schema": "https://raw.githubusercontent.com/ChatGPTNextWeb/NextChat-Awesome-Plugins/main/plugins/duckduckgolite/openapi.json"
+    "schema": "/plugins/duckduckgo-html.json"
   }
 ]
