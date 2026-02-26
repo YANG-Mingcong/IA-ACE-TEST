@@ -7,14 +7,14 @@
   },
   "servers": [
     {
-      "url": "https://html.duckduckgo.com"
+      "url": "https://lite.duckduckgo.com"
     }
   ],
   "paths": {
-    "/html": {
-      "get": {
+    "/lite": {
+      "post": {
         "operationId": "DuckDuckGoLiteSearch",
-        "description": "a search engine. useful for current events. input should be a search query.",
+        "description": "a search engine. useful for when you need to answer questions about current events. input should be a search query.",
         "deprecated": false,
         "parameters": [
           {
@@ -27,9 +27,41 @@
             }
           },
           {
+            "name": "s",
+            "in": "query",
+            "description": "can be `0`",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "o",
+            "in": "query",
+            "description": "can be `json`",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "api",
+            "in": "query",
+            "description": "can be `d.js`",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "kl",
             "in": "query",
-            "description": "region or language, e.g. wt-wt, us-en, uk-en.",
+            "description": "wt-wt, us-en, uk-en, ru-ru, etc. Defaults to `wt-wt`.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "bing_market",
+            "in": "query",
+            "description": "wt-wt, us-en, uk-en, ru-ru, etc. Defaults to `wt-wt`.",
             "schema": {
               "type": "string"
             }
