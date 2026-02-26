@@ -45,6 +45,16 @@ export async function handle(
       headers.set("Authorization", `Bearer ${serverConfig.apiKey}`);
     }
 
+    // fix: duckduckgo 403
+    if (baseUrl?.includes("duckduckgo.com")) {
+      headers.set("Referer", "https://lite.duckduckgo.com/");
+      headers.set("Origin", "https://lite.duckduckgo.com");
+      headers.set(
+        "User-Agent",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      );
+    }
+
   const controller = new AbortController();
   const fetchOptions: RequestInit = {
     headers,
